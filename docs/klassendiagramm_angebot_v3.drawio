@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-11T08:55:33+00:00" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="klassendiagramm-v3" name="UML Klassendiagramm">
+    <mxGraphModel dx="1600" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2080" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="UML-Klassendiagramm | Objektorientierte Angebotskalkulation" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=24;fontStyle=1;fontColor=#182c3d;" vertex="1" parent="1">
+          <mxGeometry x="70" y="30" width="850" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="CDT-Akademie | Projektentwurf v3 | Durchgezogen: Assoziation, gestrichelt: Abhängigkeit" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#5e7081;" vertex="1" parent="1">
+          <mxGeometry x="70" y="82" width="1500" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="main" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="840" y="140" width="340" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="main_header" value="&lt;b&gt;Main&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="main">
+          <mxGeometry x="0" y="0" width="340" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="main_attrs" value="" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="main">
+          <mxGeometry x="0" y="51" width="340" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="main_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="main">
+          <mxGeometry x="0" y="90" width="340" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="main_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ main(args: String[]): void&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="main">
+          <mxGeometry x="0" y="92" width="340" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="730" y="315" width="490" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_header" value="&lt;b&gt;KonsolenUI&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="ui">
+          <mxGeometry x="0" y="0" width="490" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- scanner: Scanner&lt;/div&gt;&lt;div&gt;- rechner: Angebotsrechner&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="ui">
+          <mxGeometry x="0" y="51" width="490" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="ui">
+          <mxGeometry x="0" y="123" width="490" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ KonsolenUI(scanner: Scanner, rechner: Angebotsrechner)&lt;/div&gt;&lt;div&gt;+ starten(): void&lt;/div&gt;&lt;div&gt;- zeigeSchulungsmenue(): void&lt;/div&gt;&lt;div&gt;- liesSchulung(): Schulung&lt;/div&gt;&lt;div&gt;- liesTeilnehmerzahl(): int&lt;/div&gt;&lt;div&gt;- zeigeAngebot(angebot: Angebot): void&lt;/div&gt;&lt;div&gt;- zeigeVergleich(vergleich: Angebotsvergleich): void&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="ui">
+          <mxGeometry x="0" y="125" width="490" height="191" as="geometry" />
+        </mxCell>
+        <mxCell id="schulung" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="70" y="230" width="460" height="336" as="geometry" />
+        </mxCell>
+        <mxCell id="schulung_header" value="&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;div&gt;&lt;b&gt;Schulung&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="schulung">
+          <mxGeometry x="0" y="0" width="460" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="schulung_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;EXCEL_AUFBAU&lt;/div&gt;&lt;div&gt;SQL_GRUNDLAGEN&lt;/div&gt;&lt;div&gt;JAVA_GRUNDLAGEN&lt;/div&gt;&lt;div&gt;NETZWERKTECHNIK&lt;/div&gt;&lt;div&gt;WINDOWS_SERVER_GRUNDLAGEN&lt;/div&gt;&lt;div&gt;- bezeichnung: String&lt;/div&gt;&lt;div&gt;- dauerTage: int&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="schulung">
+          <mxGeometry x="0" y="51" width="460" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="schulung_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="schulung">
+          <mxGeometry x="0" y="223" width="460" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="schulung_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- Schulung(bezeichnung: String, dauerTage: int)&lt;/div&gt;&lt;div&gt;+ getBezeichnung(): String&lt;/div&gt;&lt;div&gt;+ getDauerTage(): int&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="schulung">
+          <mxGeometry x="0" y="225" width="460" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="vergleich" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="235" width="550" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="vergleich_header" value="&lt;b&gt;Angebotsvergleich&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="vergleich">
+          <mxGeometry x="0" y="0" width="550" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="vergleich_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- urspruenglichesAngebot: Angebot&lt;/div&gt;&lt;div&gt;- alternativesAngebot: Angebot&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="vergleich">
+          <mxGeometry x="0" y="51" width="550" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="vergleich_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="vergleich">
+          <mxGeometry x="0" y="123" width="550" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vergleich_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ Angebotsvergleich(urspruenglich: Angebot, alternativ: Angebot)&lt;/div&gt;&lt;div&gt;+ getGesamtpreisdifferenz(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getTeilnehmerpreisdifferenz(): BigDecimal&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="vergleich">
+          <mxGeometry x="0" y="125" width="550" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="anfrage" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="90" y="730" width="460" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="anfrage_header" value="&lt;b&gt;Anfrage&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="anfrage">
+          <mxGeometry x="0" y="0" width="460" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="anfrage_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- schulung: Schulung&lt;/div&gt;&lt;div&gt;- teilnehmerzahl: int&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="anfrage">
+          <mxGeometry x="0" y="51" width="460" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="anfrage_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="anfrage">
+          <mxGeometry x="0" y="123" width="460" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="anfrage_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ Anfrage(schulung: Schulung, teilnehmerzahl: int)&lt;/div&gt;&lt;div&gt;+ getSchulung(): Schulung&lt;/div&gt;&lt;div&gt;+ getTeilnehmerzahl(): int&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="anfrage">
+          <mxGeometry x="0" y="125" width="460" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="rechner" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="760" y="730" width="470" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="rechner_header" value="&lt;b&gt;Angebotsrechner&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="rechner">
+          <mxGeometry x="0" y="0" width="470" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="rechner_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- regeln: Kalkulationsregeln&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="rechner">
+          <mxGeometry x="0" y="51" width="470" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="rechner_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="rechner">
+          <mxGeometry x="0" y="103" width="470" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rechner_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ Angebotsrechner(regeln: Kalkulationsregeln)&lt;/div&gt;&lt;div&gt;+ berechne(anfrage: Anfrage): Angebot&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="rechner">
+          <mxGeometry x="0" y="105" width="470" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="regeln" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="750" y="1040" width="530" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="regeln_header" value="&lt;b&gt;Kalkulationsregeln&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="regeln">
+          <mxGeometry x="0" y="0" width="530" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="regeln_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- dozentenTagessatz: BigDecimal&lt;/div&gt;&lt;div&gt;- raumTagessatz: BigDecimal&lt;/div&gt;&lt;div&gt;- unterlagenProTeilnehmer: BigDecimal&lt;/div&gt;&lt;div&gt;- verwaltungspauschale: BigDecimal&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="regeln">
+          <mxGeometry x="0" y="51" width="530" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="regeln_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="regeln">
+          <mxGeometry x="0" y="163" width="530" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="regeln_methods" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;+ Kalkulationsregeln()&lt;/div&gt;&lt;div&gt;+ getDozentenTagessatz(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getRaumTagessatz(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getUnterlagenProTeilnehmer(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getVerwaltungspauschale(): BigDecimal&lt;/div&gt;&lt;div&gt;+ ermittleRabattsatz(teilnehmerzahl: int): BigDecimal&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="regeln">
+          <mxGeometry x="0" y="165" width="530" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="angebot" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6a879a;strokeWidth=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="690" width="590" height="574" as="geometry" />
+        </mxCell>
+        <mxCell id="angebot_header" value="&lt;b&gt;Angebot&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;strokeColor=none;fillColor=#E8F2F7;fontSize=18;fontColor=#173a54;" vertex="1" parent="angebot">
+          <mxGeometry x="0" y="0" width="590" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="angebot_attrs" value="&lt;div style=&quot;line-height:1.45&quot;&gt;&lt;div&gt;- anfrage: Anfrage&lt;/div&gt;&lt;div&gt;- dozentenkosten: BigDecimal&lt;/div&gt;&lt;div&gt;- raumkosten: BigDecimal&lt;/div&gt;&lt;div&gt;- unterlagenkosten: BigDecimal&lt;/div&gt;&lt;div&gt;- verwaltungspauschale: BigDecimal&lt;/div&gt;&lt;div&gt;- zwischensumme: BigDecimal&lt;/div&gt;&lt;div&gt;- rabattsatz: BigDecimal&lt;/div&gt;&lt;div&gt;- rabattbetrag: BigDecimal&lt;/div&gt;&lt;div&gt;- angebotspreis: BigDecimal&lt;/div&gt;&lt;div&gt;- preisProTeilnehmer: BigDecimal&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=14;fontColor=#25394b;" vertex="1" parent="angebot">
+          <mxGeometry x="0" y="51" width="590" height="232" as="geometry" />
+        </mxCell>
+        <mxCell id="angebot_line" value="" style="shape=line;strokeColor=#9cb2be;strokeWidth=1;fillColor=none;" vertex="1" parent="angebot">
+          <mxGeometry x="0" y="283" width="590" height="1" as="geometry" />
+        </mxCell>
+        <mxCell id="angebot_methods" value="&lt;div style=&quot;line-height:1.34&quot;&gt;&lt;div&gt;+ Angebot(anfrage: Anfrage, dozentenkosten: BigDecimal,&lt;/div&gt;&lt;div&gt;  raumkosten: BigDecimal, unterlagenkosten: BigDecimal,&lt;/div&gt;&lt;div&gt;  verwaltungspauschale: BigDecimal, zwischensumme: BigDecimal,&lt;/div&gt;&lt;div&gt;  rabattsatz: BigDecimal, rabattbetrag: BigDecimal,&lt;/div&gt;&lt;div&gt;  angebotspreis: BigDecimal, preisProTeilnehmer: BigDecimal)&lt;/div&gt;&lt;div&gt;+ getAnfrage(): Anfrage&lt;/div&gt;&lt;div&gt;+ getDozentenkosten(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getRaumkosten(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getUnterlagenkosten(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getVerwaltungspauschale(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getZwischensumme(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getRabattsatz(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getRabattbetrag(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getAngebotspreis(): BigDecimal&lt;/div&gt;&lt;div&gt;+ getPreisProTeilnehmer(): BigDecimal&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;overflow=hidden;spacingTop=8;spacingLeft=14;strokeColor=none;fillColor=none;fontSize=13;fontColor=#25394b;" vertex="1" parent="angebot">
+          <mxGeometry x="0" y="285" width="590" height="289" as="geometry" />
+        </mxCell>
+        <mxCell id="e_main_ui" value="startet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="main" target="ui">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ui_rechner" value="nutzt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="ui" target="rechner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ui_vergleich" value="erzeugt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="ui" target="vergleich">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ui_anfrage" value="erzeugt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="ui" target="anfrage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="530" />
+              <mxPoint x="650" y="775" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_anfrage_schulung" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="anfrage" target="schulung">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rechner_anfrage" value="berechnet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="rechner" target="anfrage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rechner_regeln" value="nutzt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="rechner" target="regeln">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rechner_angebot" value="erzeugt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=8 6;" edge="1" parent="1" source="rechner" target="angebot">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_vergleich_original" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;exitX=0.33;exitY=1;exitDx=0;exitDy=0;entryX=0.35;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vergleich" target="angebot">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_angebot_anfrage" value="gehört zu (1)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="angebot" target="anfrage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1670" y="1420" />
+              <mxPoint x="325" y="1420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="footer" value="+ public | - private. Angebot: 10 private final Attribute; sämtliche Werte werden im Angebotsrechner ermittelt." style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#657789;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1450" width="1750" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vergleich_alternativ" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#638198;strokeWidth=2;endArrow=open;endFill=0;fontColor=#415a70;fontSize=13;labelBackgroundColor=#FFFFFF;exitX=0.69;exitY=1;exitDx=0;exitDy=0;entryX=0.69;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vergleich" target="angebot">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_vergleich_original" value="urspruenglichesAngebot [1]" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=14;fontColor=#415a70;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1357" y="562" width="300" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="label_vergleich_alternative" value="alternativesAngebot [1]" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=14;fontColor=#415a70;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1818" y="606" width="220" height="42" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
