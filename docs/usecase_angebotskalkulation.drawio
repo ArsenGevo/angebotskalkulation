@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-10-30T10:30:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="uc-angebot-v1" name="Use-Case-Diagramm">
+    <mxGraphModel dx="1280" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1280" pageHeight="790" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heading" value="UML-Use-Case-Diagramm | Angebotskalkulation" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;fontSize=26;fontColor=#183348;" vertex="1" parent="1">
+          <mxGeometry x="65" y="34" width="1020" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="subheading" value="CDT-Akademie | Projektentwurf v1" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontColor=#6b8191;" vertex="1" parent="1">
+          <mxGeometry x="65" y="83" width="800" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="system" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#7894a7;strokeWidth=2;fillColor=#fcfdff;" vertex="1" parent="1">
+          <mxGeometry x="325" y="136" width="875" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="system_label" value="System: Angebotskalkulation" style="rounded=0;html=1;whiteSpace=wrap;align=left;spacingLeft=15;verticalAlign=middle;strokeColor=#7894a7;strokeWidth=1.5;fillColor=#edf4f8;fontColor=#315369;fontSize=19;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="136" width="370" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" value="Benutzer" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;whiteSpace=wrap;strokeColor=#36546a;fontColor=#183348;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="116" y="255" width="78" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_calculate" value="Angebot kalkulieren" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#437b88;strokeWidth=2;fillColor=#eaf4f6;fontColor=#183348;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="506" y="243" width="364" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_compare" value="Teilnehmervergleich&lt;br&gt;durchführen" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#437b88;strokeWidth=2;fillColor=#eaf4f6;fontColor=#183348;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="542" y="416" width="400" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_exit" value="Programm beenden" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#437b88;strokeWidth=2;fillColor=#eaf4f6;fontColor=#183348;fontSize=19;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="510" y="554" width="330" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_calc" value="" style="html=1;endArrow=none;startArrow=none;strokeColor=#738b9d;strokeWidth=2;edgeStyle=none;" edge="1" parent="1" source="actor" target="uc_calculate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_comp" value="" style="html=1;endArrow=none;startArrow=none;strokeColor=#738b9d;strokeWidth=2;edgeStyle=none;" edge="1" parent="1" source="actor" target="uc_compare">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_exit" value="" style="html=1;endArrow=none;startArrow=none;strokeColor=#738b9d;strokeWidth=2;edgeStyle=none;" edge="1" parent="1" source="actor" target="uc_exit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend" value="«extend»" style="html=1;dashed=1;dashPattern=8 6;endArrow=open;endFill=0;strokeColor=#547386;strokeWidth=2;fontColor=#4f6474;fontSize=16;labelBackgroundColor=#FFFFFF;edgeStyle=none;" edge="1" parent="1" source="uc_compare" target="uc_calculate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hint1" value="Hinweis: Eine weitere Anfrage wird durch erneutes Ausführen von „Angebot kalkulieren“ bearbeitet." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#607989;" vertex="1" parent="1">
+          <mxGeometry x="65" y="705" width="1100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hint2" value="Die Eingabeprüfung und die einzelnen Rechenschritte werden im Aktivitätsdiagramm modelliert." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#607989;" vertex="1" parent="1">
+          <mxGeometry x="65" y="730" width="1080" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
