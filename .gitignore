@@ -1,8 +1,25 @@
 ### IntelliJ IDEA ###
+# Keep *.iml and shared .idea settings: this project has no Maven/Gradle build file.
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources.local.xml
+.idea/dataSources/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+
+### Java build output and diagnostics ###
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+*.hprof
+
+### Local MCP configuration ###
+/.codex/config.toml
 
 ### Eclipse ###
 .apt_generated
@@ -28,3 +45,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Windows ###
+Thumbs.db
+Desktop.ini

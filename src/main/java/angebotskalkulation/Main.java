@@ -7,6 +7,7 @@ import java.util.Scanner;
 public final class Main {
     private Main() {
         // Kein Instanzobjekt erforderlich.
+        // throw new UnsupportedOperationException("Entry point class cannot be instantiated");
     }
 
     public static void main(String[] args) {

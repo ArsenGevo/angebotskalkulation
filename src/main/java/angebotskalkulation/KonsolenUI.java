@@ -33,6 +33,14 @@ public final class KonsolenUI {
                 Angebot angebot = rechner.berechne(anfrage);
                 zeigeAngebot(angebot);
 
+                if (frageTeilnehmervergleich()) {
+                    int alternativeTeilnehmerzahl = liesTeilnehmerzahl(
+                            "Alternative Teilnehmerzahl (1-15): ");
+                    Anfrage alternativeAnfrage = new Anfrage(schulung, alternativeTeilnehmerzahl);
+                    Angebot alternativesAngebot = rechner.berechne(alternativeAnfrage);
+                    zeigeVergleich(new Angebotsvergleich(angebot, alternativesAngebot));
+                }
+
                 weitereAnfrage = frageWeitereAnfrage();
             } while (weitereAnfrage);
 
@@ -73,8 +81,12 @@ public final class KonsolenUI {
     }
 
     private int liesTeilnehmerzahl() {
+        return liesTeilnehmerzahl("Teilnehmerzahl (1-15): ");
+    }
+
+    private int liesTeilnehmerzahl(String eingabeaufforderung) {
         while (true) {
-            System.out.print("Teilnehmerzahl (1-15): ");
+            System.out.print(eingabeaufforderung);
             System.out.flush();
             String eingabe = scanner.nextLine().trim();
             try {
@@ -110,6 +122,40 @@ public final class KonsolenUI {
     private void zeigeKostenposition(String bezeichnung, BigDecimal betrag) {
         System.out.printf("%-26s %15s%n", bezeichnung,
                 String.format(Locale.GERMANY, "%,.2f €", betrag));
+    }
+
+    private void zeigeVergleich(Angebotsvergleich vergleich) {
+        Angebot urspruenglich = vergleich.getUrspruenglichesAngebot();
+        Angebot alternativ = vergleich.getAlternativesAngebot();
+        System.out.println("\n--- Teilnehmervergleich ---");
+        System.out.println("Schulung: " + urspruenglich.getAnfrage().getSchulung().getBezeichnung());
+        System.out.println("Ursprüngliche Teilnehmerzahl: "
+                + urspruenglich.getAnfrage().getTeilnehmerzahl());
+        System.out.println("Alternative Teilnehmerzahl: "
+                + alternativ.getAnfrage().getTeilnehmerzahl());
+        zeigeKostenposition("Gesamtpreis ursprünglich:", urspruenglich.getAngebotspreis());
+        zeigeKostenposition("Gesamtpreis alternativ:", alternativ.getAngebotspreis());
+        zeigeKostenposition("Preis pro TN ursprünglich:", urspruenglich.getPreisProTeilnehmer());
+        zeigeKostenposition("Preis pro TN alternativ:", alternativ.getPreisProTeilnehmer());
+        zeigeKostenposition("Gesamtpreisdifferenz:", vergleich.getGesamtpreisdifferenz());
+        zeigeKostenposition("Teilnehmerpreisdifferenz:", vergleich.getTeilnehmerpreisdifferenz());
+        System.out.println("Differenz = Alternative minus ursprüngliches Angebot; "
+                + "negativ bedeutet günstiger.");
+    }
+
+    private boolean frageTeilnehmervergleich() {
+        while (true) {
+            System.out.print("\nTeilnehmervergleich durchführen? (j/n): ");
+            System.out.flush();
+            String eingabe = scanner.nextLine().trim();
+            if (eingabe.equalsIgnoreCase("j") || eingabe.equalsIgnoreCase("ja")) {
+                return true;
+            }
+            if (eingabe.equalsIgnoreCase("n") || eingabe.equalsIgnoreCase("nein")) {
+                return false;
+            }
+            System.out.println("Ungültige Eingabe. Bitte j oder n eingeben.");
+        }
     }
 
     private boolean frageWeitereAnfrage() {

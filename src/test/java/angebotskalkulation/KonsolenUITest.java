@@ -59,7 +59,7 @@ public final class KonsolenUITest {
     }
 
     public static void main(String[] args) {
-        String java12 = laufeMitEingaben("3\n12\nn\n");
+        String java12 = laufeMitEingaben("3\n12\nn\nn\n");
         enthaelt(java12, "Java Grundlagen", "Schulung aus dem Menü gewählt");
         enthaelt(java12, "Schulungsdauer: 10 Tage", "Dauer angezeigt");
         enthaelt(java12, "Teilnehmerzahl: 12", "Teilnehmerzahl angezeigt");
@@ -75,7 +75,7 @@ public final class KonsolenUITest {
         enthaelt(java12, "Programm beendet.", "Normales Ende");
         istGleich(1, zaehle(java12, "--- Angebotskalkulation ---"), "Genau ein Angebot");
 
-        String fehler = laufeMitEingaben("abc\n0\n6\n3\n0\n16\n7.5\nxyz\n12\nn\n");
+        String fehler = laufeMitEingaben("abc\n0\n6\n3\n0\n16\n7.5\nxyz\n12\nn\nn\n");
         istGleich(3, zaehle(fehler, "Ungültige Schulungsauswahl"),
                 "Ungültige Schulungen werden wiederholt");
         istGleich(4, zaehle(fehler, "Ungültige Teilnehmerzahl"),
@@ -84,7 +84,7 @@ public final class KonsolenUITest {
         istGleich(1, zaehle(fehler, "--- Angebotskalkulation ---"),
                 "Keine Kalkulation mit ungültigen Zahlen");
 
-        String wiederholung = laufeMitEingaben("1\n1\nja\n2\n6\nnein\n");
+        String wiederholung = laufeMitEingaben("1\n1\nn\nja\n2\n6\nn\nnein\n");
         istGleich(2, zaehle(wiederholung, "--- Angebotskalkulation ---"),
                 "Neue Anfrage im selben Programmlauf");
         enthaelt(wiederholung, "Excel Aufbau", "Erste Anfrage Excel");
@@ -94,22 +94,64 @@ public final class KonsolenUITest {
         enthaelt(wiederholung, "Rabattsatz: 0 %", "Nullrabatt angezeigt");
         enthaelt(wiederholung, "Rabattsatz: 5 %", "Fünfprozent-Rabatt angezeigt");
 
-        String antwort = laufeMitEingaben("1\n1\nvielleicht\nj\n5\n15\nn\n");
+        String antwort = laufeMitEingaben("1\n1\nn\nvielleicht\nj\n5\n15\nn\nn\n");
         istGleich(1, zaehle(antwort, "Ungültige Eingabe. Bitte j oder n"),
                 "Wiederholungsfrage prüft Antworten");
         istGleich(2, zaehle(antwort, "--- Angebotskalkulation ---"),
                 "Nach falscher Antwort geht Wiederholung");
         enthaelt(antwort, "8.572,50 €", "15 Teilnehmer mit zehn Prozent Rabatt");
 
-        String ende = laufeMitEingaben("1\n1\n");
+        String ende = laufeMitEingaben("1\n1\nn\n");
         enthaelt(ende, "Keine weitere Eingabe verfügbar", "EOF beendet sauber");
         istGleich(1, zaehle(ende, "--- Angebotskalkulation ---"), "EOF keine Extraschleife");
 
-        String grosseZahl = laufeMitEingaben("99999999999999\n1\n-1\n\n1\nn\n");
+        String grosseZahl = laufeMitEingaben("99999999999999\n1\n-1\n\n1\nn\nn\n");
         istGleich(1, zaehle(grosseZahl, "Ungültige Schulungsauswahl"),
                 "Überlauf in Menüeingabe behandelt");
         istGleich(2, zaehle(grosseZahl, "Ungültige Teilnehmerzahl"),
                 "Negative und leere Eingabe behandelt");
+
+        String vergleich = laufeMitEingaben("3\n8\nj\n12\nn\n");
+        enthaelt(vergleich, "--- Teilnehmervergleich ---", "Vergleichsausgabe gestartet");
+        enthaelt(vergleich, "Ursprüngliche Teilnehmerzahl: 8", "Ausgangszahl im Vergleich");
+        enthaelt(vergleich, "Alternative Teilnehmerzahl: 12", "Alternative Zahl im Vergleich");
+        enthaelt(vergleich, "8.882,50 €", "Ausgangs-Gesamtpreis im Vergleich");
+        enthaelt(vergleich, "8.505,00 €", "Alternativer Gesamtpreis im Vergleich");
+        enthaelt(vergleich, "1.110,31 €", "Ausgangs-Einzelpreis im Vergleich");
+        enthaelt(vergleich, "708,75 €", "Alternativer Einzelpreis im Vergleich");
+        enthaelt(vergleich, "-377,50 €", "Negative Gesamtpreisdifferenz");
+        enthaelt(vergleich, "-401,56 €", "Negative Teilnehmerpreisdifferenz");
+        enthaelt(vergleich, "Programm beendet.", "Programmende nach Vergleich");
+        istGleich(1, zaehle(vergleich, "--- Angebotskalkulation ---"),
+                "Alternative wird nicht als regulärer Durchlauf ausgegeben");
+
+        String vergleichFehler = laufeMitEingaben("2\n10\nvielleicht\nJA\n0\n16\nabc\n11\nn\n");
+        istGleich(1, zaehle(vergleichFehler, "Ungültige Eingabe. Bitte j oder n"),
+                "Vergleichsfrage validiert Antwort");
+        istGleich(3, zaehle(vergleichFehler, "Ungültige Teilnehmerzahl"),
+                "Alternative Teilnehmerzahl validiert");
+        enthaelt(vergleichFehler, "-447,50 €", "Rabattgrenze 10/11 im Vergleich");
+
+        String gleicherVergleich = laufeMitEingaben("3\n12\nja\n12\nn\n");
+        enthaelt(gleicherVergleich, "0,00 €", "Gleiche Teilnehmerzahl ergibt Nulldifferenz");
+        istGleich(1, zaehle(gleicherVergleich, "--- Teilnehmervergleich ---"),
+                "Gleiche Teilnehmerzahl erlaubt");
+
+        String ohneVergleich = laufeMitEingaben("1\n1\nnein\nnein\n");
+        istGleich(0, zaehle(ohneVergleich, "--- Teilnehmervergleich ---"),
+                "Vergleich ist optional");
+        enthaelt(ohneVergleich, "Programm beendet.", "Normaler Ablauf ohne Vergleich");
+
+        String weitereNachVergleich = laufeMitEingaben("3\n8\nj\n12\nja\n1\n1\nn\nn\n");
+        istGleich(1, zaehle(weitereNachVergleich, "--- Teilnehmervergleich ---"),
+                "Vergleich nur bei erster Anfrage");
+        istGleich(2, zaehle(weitereNachVergleich, "--- Angebotskalkulation ---"),
+                "Weitere reguläre Anfrage nach Vergleich");
+        enthaelt(weitereNachVergleich, "Excel Aufbau", "Neue Schulung nach Vergleich möglich");
+
+        String endeVergleich = laufeMitEingaben("3\n8\nj\n");
+        enthaelt(endeVergleich, "Keine weitere Eingabe verfügbar",
+                "EOF bei alternativer Teilnehmerzahl beendet sicher");
 
         erwartetNullPointer(
                 () -> new KonsolenUI(null,
