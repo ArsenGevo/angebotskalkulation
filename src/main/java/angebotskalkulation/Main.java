@@ -6,8 +6,7 @@ import java.util.Scanner;
 /** Einstiegspunkt der Anwendung; enthält keine Geschäfts- oder Konsolenlogik. */
 public final class Main {
     private Main() {
-        // Kein Instanzobjekt erforderlich.
-        // throw new UnsupportedOperationException("Entry point class cannot be instantiated");
+        throw new UnsupportedOperationException("Entry point class cannot be instantiated");
     }
 
     public static void main(String[] args) {
